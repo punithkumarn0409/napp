@@ -24,59 +24,125 @@ class _HomePageState extends State<HomePage> {
       ),
       backgroundColor: Color(0xfff8e7f6), //Scaffold BG Color
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Expanded(
-              flex: 8,
-              child: Container(
-                margin: EdgeInsets.all(width*0.04),
-                decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(25),
-                color: Colors.white,
-              ),
-              ),
-            ),
-            Expanded(
-              child: Row(
-                children: [
-                  Expanded(
-                    flex: 3,
-                    child: Container(
-                      margin: EdgeInsets.symmetric(vertical: width*0.01, horizontal: width*0.07),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(100),
-                        color: Color(0xffc670fe),
+        child: Container(
+          margin: EdgeInsets.symmetric(vertical: 10),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Expanded(
+                flex: 2,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Expanded(
+                        child: Container(
+                          margin: EdgeInsets.symmetric(horizontal: width*0.04),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(100),
+                            color: Colors.white,
+                          ),
                       ),
-                    ),
+                      ),
+                      Expanded(
+                        child: Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(100),
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                      Expanded(
+                        child: Container(
+                          margin: EdgeInsets.symmetric(horizontal: width*0.04),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(100),
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
-                  Expanded(
-                    child: Container(
+              ),
+              Expanded(
+                flex: 24,
+                child: Container(
+                  margin: EdgeInsets.all(width*0.04),
+                  decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(25),
+                  color: Colors.white,
+                ),
+                ),
+              ),
+              Expanded(
+                flex: 3,
+                child: Row(
+                  children: [
+                    Expanded(
+                      flex: 3,
+                      child: Container(
+                        margin: EdgeInsets.symmetric(vertical: width*0.01, horizontal: width*0.07),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(100),
+                          color: Color(0xffc670fe),
+                        ),
                       ),
                     ),
-                  Expanded(
-                    flex: 5,
-                    child: Container(
-                      margin: EdgeInsets.symmetric(vertical: width*0.01, horizontal: width*0.07),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(100),
-                        color: Color(0xffba53fd),
+                    Expanded(
+                      flex: 0,
+                      child: Container(
+                        ),
+                      ),
+                    Expanded(
+                      flex: 5,
+                      child: Container(
+                        margin: EdgeInsets.symmetric(vertical: width*0.01, horizontal: width*0.07),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(100),
+                          color: Color(0xffba53fd),
+                        ),
                       ),
                     ),
-                  ),
-                ],
-              )
-            ),
-          ],
+                  ],
+                )
+              ),
+            ],
+          ),
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: const Color(0xfff8e7f6),
+        backgroundColor: const Color(0xff320053),
           elevation: 0,
           items: [
-            BottomNavigationBarItem(icon: Icon(Icons.home, color: Color(0xff4b164c), size: 50,), label: 'home'),
-            BottomNavigationBarItem(icon: Icon(Icons.search, color: Color(0xff4b164c), size: 50), label: 'search'),
-            BottomNavigationBarItem(icon: Icon(Icons.shop, color: Color(0xff4b164c), size: 50,), label: 'shop'),
+            BottomNavigationBarItem(
+                icon: Container(
+                  width: 40,
+                  margin: EdgeInsets.only(top: 15),
+                  child: Image.asset(
+                    'assets/images/user.png',
+                    color: Colors.white,
+                  ),
+                ),
+                label: ''),
+            BottomNavigationBarItem(
+                icon: Container(
+                  width: 40,
+                  margin: EdgeInsets.only(top: 15),
+                  child: Image.asset(
+                    'assets/images/heart.png',
+                    color: Colors.white,
+                  ),
+                ),
+                label: ''),
+            BottomNavigationBarItem(
+                icon: Container(
+                  width: 40,
+                  margin: EdgeInsets.only(top: 15),
+                  child: Image.asset(
+                    'assets/images/message.png',
+                    color: Colors.white,
+                  ),
+                ),
+                label: ''),
           ],
       ),
     );
